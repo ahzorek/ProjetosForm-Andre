@@ -14,40 +14,79 @@
     background-position: 0px 0px;
     background-image: linear-gradient(90deg, #A100FFFF 0%, #71C4FFFF 100%);
     background-color: rgb(40 40 40);
-    color: rgb(245, 245, 245);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    text-align: center;
   }
 
   section {
     display: flex;
     justify-content: center;
-    text-align: left;
+    margin: auto;
+    padding: 1rem;
+    max-width: fit-content;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
   }
 
-  form {
-    display: inherit;
-    flex-direction: column;
-    gap: 1rem;
+  h1 {
+    text-align: center;
+    color: aliceblue;
   }
 
   label {
+    display: block;
+    margin-bottom: 5px;
     font-size: .8rem;
-    display: flex;
-    flex-direction: column;
+  }
+
+  .required {
+    font-size: smaller;
+    font-weight: bold;
+    color: orangered;
+    vertical-align: super;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  select,
+  textarea {
+    position: relative;
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: .8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .primary {
+    background-color: #007bff;
+    color: #fff;
+  }
+
+  .primary:hover {
+    background-color: #0056b3;
   }
 </style>
 
 <body>
   <h1>Formulário de Contato</h1>
   <section>
-    <form action="">
-      <label for="fullName">Nome completo
-        <input required name="Nome" id="fullName" type="text" value="" placeholder="John Doe">
+    <form autocomplete="off" action="">
+      <label for="fullName">Nome completo <span class="required">obrigatório</span>
+        <input aria-required="true" required name="Nome" id="fullName" type="text" value="" placeholder="John Doe">
       </label>
 
-      <label for="email">E-mail
-        <input required name="E-mail" id="email" type="email" value="" placeholder="johndoe@mailco.com">
+      <label for="email">E-mail <span class="required">obrigatório</span>
+        <input aria-required="true" required name="E-mail" id="email" type="email" value=""
+          placeholder="johndoe@mailco.com">
       </label>
 
       <label for="businessOrg">Organização
@@ -55,12 +94,12 @@
       </label>
 
       <label for="contactPhone">Telefone contato
-        <input name="Telefone" id="contactPhone" inputmode="numeric" pattern="[0-9]*" value=""
-          placeholder="Seu telefone">
+        <input name="Telefone" id="contactPhone" type="text" pattern="[0-9]*" value="" placeholder="47 00000 0000">
       </label>
 
-      <label for="subject">Motivo do contato
-        <select required name="Motivo do contato" id="subject" name="Motivo do contato" placeholder="seu contato">
+      <label for="subject">Motivo do contato <span class="required">obrigatório</span>
+        <select aria-required="true" required name="Motivo do contato" id="subject" name="Motivo do contato"
+          placeholder="seu contato">
           <option value="none" disabled selected>Selecione sua opção</option>
           <option value="matricula">Mátricula</option>
           <option value="duvidas">Dúvidas</option>
@@ -68,8 +107,9 @@
         </select>
       </label>
 
-      <label for="message">Sua mensagem
-        <textarea required name="Mensagem" id="message" cols="30" rows="10" placeholder="Sua mensagem aqui"></textarea>
+      <label for="message">Sua mensagem <span class="required">obrigatório</span>
+        <textarea aria-required="true" required name="Mensagem" id="message" cols="30" rows="10"
+          placeholder="Sua mensagem aqui"></textarea>
       </label>
       <div>
         <button class="primary" type="submit">Enviar</button>
