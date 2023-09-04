@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário Contato</title>
+</head>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-size: 100% 100%;
+    background-position: 0px 0px;
+    background-image: linear-gradient(90deg, #A100FFFF 0%, #71C4FFFF 100%);
+    background-color: rgb(40 40 40);
+    color: rgb(220, 220, 220);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  form {
+    display: inherit;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  label {
+    display: flex;
+    flex-direction: inherit;
+    font-size: .8rem;
+  }
+</style>
+
+<body>
+  <section>
+    <form action="">
+      <label for="fullName">Nome completo
+        <input name="Nome" id="fullName" type="text" value="" placeholder="John Doe">
+      </label>
+
+      <label for="email">E-mail
+        <input name="E-mail" id="email" type="text" value="" placeholder="johndoe@mailco.com">
+      </label>
+
+      <label for="businessOrg">Organização
+        <input name="Organização" id="businessOrg" type="text" value="" placeholder="Doe Company Inc.">
+      </label>
+
+      <label for="contactPhone">Telefone contato
+        <input name="Telefone" id="contactPhone" inputmode="numeric" pattern="[0-9]*" value=""
+          placeholder="Seu telefone">
+      </label>
+
+      <label for="subject">Motivo do contato
+        <select name="Motivo do contato" id="subject" name="Motivo do contato">
+          <option value="matricula">Mátricula</option>
+          <option value="duvidas">Dúvidas</option>
+          <option value="plataforma">Plataforma</option>
+        </select>
+      </label>
+
+      <label for="message">Sua mensagem
+        <textarea name="Mensagem" id="message" cols="30" rows="10" placeholder="Sua mensagem aqui"></textarea>
+      </label>
+      <button type="submit">Enviar</button>
+      <button type="reset">Limpar</button>
+    </form>
+  </section>
+
+</body>
+
+</html>
