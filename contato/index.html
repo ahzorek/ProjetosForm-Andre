@@ -9,7 +9,7 @@
 <style>
   body {
     margin: 0;
-    padding: 0;
+    padding: 2rem;
     height: 100vh;
     background-size: 100% 100%;
     background-position: 0px 0px;
@@ -17,9 +17,14 @@
     background-color: rgb(40 40 40);
     color: rgb(220, 220, 220);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+  }
+
+  section {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: left;
   }
 
   form {
@@ -36,6 +41,7 @@
 </style>
 
 <body>
+  <h1>Formulário de Contato</h1>
   <section>
     <form action="">
       <label for="fullName">Nome completo
@@ -43,7 +49,7 @@
       </label>
 
       <label for="email">E-mail
-        <input name="E-mail" id="email" type="text" value="" placeholder="johndoe@mailco.com">
+        <input name="E-mail" id="email" type="email" value="" placeholder="johndoe@mailco.com">
       </label>
 
       <label for="businessOrg">Organização
@@ -70,7 +76,6 @@
       <button type="reset">Limpar</button>
     </form>
   </section>
-
 </body>
 
 </html>
