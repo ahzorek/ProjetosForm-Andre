@@ -28,6 +28,7 @@ label {
   display: block;
   margin-bottom: 5px;
   font-size: .8rem;
+  visibility: collapse;
 }
 
 .required {
@@ -41,7 +42,7 @@ input[type="email"],
 input[type="tel"],
 select,
 textarea:focus{
-  outline-color: fuchsia;
+  outline-color: rgb(255, 0, 64);
 }
 input[type="text"],
 input[type="email"],
