@@ -24,9 +24,9 @@ html {
 }
 
 body {
-  /* font-family: "Noto Sans"; */
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  background-color: rgb(15 10 10);
+  font-family: "Noto Sans";
+  /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+  background-color: rgb(20 20 20);
   color: rgb(250 250 250);
   height: 100svh;
   overflow: hidden;
@@ -41,7 +41,7 @@ body {
   width: 100%;
   height: 100%;
   background-image: url(../shared_assets/noise.webp);
-  background-size: 5%;
+  background-size: 7%;
   opacity: .5;
   mix-blend-mode: overlay;
   z-index: -10;
@@ -55,7 +55,6 @@ body {
   filter: blur(calc(var(--size) / 4));
   background-image: var(--bg-gradient);
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-  mix-blend-mode: lighten;
   z-index: -20;
   overflow: hidden;
 }
@@ -80,6 +79,7 @@ main {
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
+  align-items: center;
   gap: 2rem;
   z-index: 10;
 
@@ -89,20 +89,20 @@ main {
 section {
   flex-grow: 1;
   flex-basis: 400px;
+
   /* border: greenyellow dashed 1px; */
 }
 
 .welcome-panel {
   display: grid;
   grid-template-rows: auto;
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
-  mix-blend-mode: hard-light;
+  font-size: 1.6rem;
+  padding: 1.5rem .5rem .5rem;
+
 }
 
-.text h1 {
+.text h2 {
   font-size: 2em;
-  /* margin-bottom: .2em; */
 }
 
 .text p, span {
@@ -125,13 +125,13 @@ section {
 }
 
 .login-panel {
-  background: rgba( 255, 255, 255, 0.1333333 );
+  background: rgba( 255, 255, 255, 0.133);
   color: rgb(255 255 255 / 1);
   box-shadow: 0 8px 32px 0 rgba( 30, 30, 30, 0.37 );
-  backdrop-filter: blur( 5.5px );
-  -webkit-backdrop-filter: blur( 5.5px );
-  border-radius: 10px;
-  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: .6rem;
+  border: 1px solid rgba( 255, 255, 255, 0.20 );
   padding: 1.5rem .5rem .5rem;
 }
 
@@ -158,25 +158,26 @@ label {
   margin-bottom: 1rem;
   border: none;
   background: rgb(0 0 0 / 0);
-  border-bottom: solid 2px rgb(255 255 255 / .18);
+  border-bottom: solid 1px rgb(255 255 255 / .20);
   color: inherit;
-}
-
-.login-input::placeholder {
-  font-weight: 400;
-  color: rgb(255 255 255 / .48);
 }
 
 .login-input:focus,
 .login-input:hover {
   outline: 0;
-  border-bottom: solid 2px rgb(255 255 255 / .48);
+  border-bottom: solid 1px rgb(255 255 255 / .50);
+}
+
+.login-input::placeholder {
+  font-weight: 400;
+  color: rgb(255 255 255 / .50);
 }
 
 input[type=text], input[type=password] {
   background-repeat: no-repeat;
+  background-position-y: center;  
   background-size: 1rem;
-  background-position-y: center;
+
 }
 input[type=text] {
   background-image: url(../shared_assets/user-solid.svg);
@@ -197,28 +198,43 @@ input[type=checkbox]{
   display: flex;
   flex-direction: row-reverse;
   align-self: flex-end;
-  margin: 1rem 0 1.4rem;
-  gap: 2rem;
+  margin: 1.2rem 0 1rem;
+  gap: 1.5rem;
 }
 .buttons button {
   /* border: 1px solid hotpink; */
   border: none;
   background: none;
-  padding: .6rem 1.4rem;
+  padding: .5rem 1.2rem;
   cursor: pointer;
 }
 
 button[type=submit]{
-  background-image: linear-gradient(
-    to bottom left, 
-    rgba(6, 6, 6, 0.75), 
-    rgba(20, 20, 20, 0.89)
-    );
+  border-radius: .3rem;
+  border: solid 2px rgb(20 20 20 / .50);
+  background-color: rgb(20 20 20 / .80);
+  background-image: radial-gradient(
+    hsla(0, 0%, 28%, 60%), 
+    transparent 55%
+  );
+  background-repeat: no-repeat;
+  background-position: 0 80px;
+  background-size: 100%;
+  transition: background-position 233ms ease-in;
   color: rgb(255 255 255);
-  font-size: .8em;
-  border-radius: .25rem;
 }
 
+button[type=submit]:hover,
+button[type=submit]:focus {
+  background-position: 0 15px;
+  transition: background-position 233ms ease-out;
+}
+
+button[type=submit]:focus{
+  outline-color: var(--color1);
+  outline-style: solid;
+
+}
 /* animação blob */
   @keyframes rotate {
     0% {
