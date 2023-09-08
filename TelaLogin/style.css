@@ -30,6 +30,7 @@ body {
   color: rgb(250 250 250);
   height: 100svh;
   overflow: hidden;
+  scrollbar-gutter: stable;
 
   /* border:  red dotted 5px; */
 
@@ -49,14 +50,13 @@ body {
 .blob {
   position: absolute;
   right: 0;
-  top: 25%;
+  bottom: 10%;
   width: var(--size);
   height: var(--size);
   filter: blur(calc(var(--size) / 4));
   background-image: var(--bg-gradient);
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
   z-index: -20;
-  overflow: hidden;
 }
 @media (min-width: 680px) {
   .blob {
@@ -103,6 +103,7 @@ section {
 
 .text h2 {
   font-size: 2em;
+  margin: 1.2rem 0;
 }
 
 .text p, span {
