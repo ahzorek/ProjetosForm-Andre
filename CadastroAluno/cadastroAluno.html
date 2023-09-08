@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro Aluno</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <form action="POST" class="cadastro-aluno">
+      <fieldset>
+        <legend>Informações Aluno</legend>
+        <input type="text" name="firstName" id="firstName" placeholder="Nome">
+        <input type="text" name="lastName" id="lastName" placeholder="Sobrenome">
+        <input type="date" name="dateOfBirth" id="dateOfBirth" placeholder="Data de nascimento" min="2000-01-01"
+          max="2017-12-31">
+        <input type="number" name="classAttending" id="classAttending" placeholder="Série" min="1" max="9" step="1">
+        <section>
+          <p>Gênero</p>
+          <input type="radio" name="gender" id="male">
+          <label for="male">Masculino</label>
+          <input type="radio" name="gender" id="female">
+          <label for="female">Feminino</label>
+          <input type="radio" name="gender" id="nonbinary">
+          <label for="nonbinary">Não-binário</label>
+        </section>
+
+      </fieldset>
+      <fieldset>
+        <legend>Informações dos Pais</legend>
+        <input type="text" name="mothersName" id="mothersName" placeholder="Nome da mãe">
+        <input type="text" name="fathersName" id="fathersName" placeholder="Nome do pai">
+      </fieldset>
+      <fieldset>
+        <legend>Informações de contato e endereço</legend>
+        <fieldset>
+          <legend>Endereço</legend>
+          <input placeholder="Endereço" type="text" name="address" id="address" autocomplete="street-address">
+          <input placeholder="Número" type="text" name="addressNumber" id="addressNumber">
+          <input placeholder="Complemento" type="text" name="address2" id="address2" autocomplete="address-line-2">
+          <input placeholder="CEP" type="text" name="postalCode" id="postalCode" autocomplete="postal-code">
+          <input placeholder="Cidade" type="text" name="city" id="city">
+          <input placeholder="Estado" list="estados" id="stateRegion" name="stateRegion" required>
+          <datalist id="estados">
+            <option value="Acre">
+            <option value="Alagoas">
+            <option value="Amapá">
+            <option value="Amazonas">
+            <option value="Bahia">
+            <option value="Ceará">
+            <option value="Distrito Federal">
+            <option value="Espírito Santo">
+            <option value="Goiás">
+            <option value="Maranhão">
+            <option value="Mato Grosso">
+            <option value="Mato Grosso do Sul">
+            <option value="Minas Gerais">
+            <option value="Pará">
+            <option value="Paraíba">
+            <option value="Paraná">
+            <option value="Pernambuco">
+            <option value="Piauí">
+            <option value="Rio de Janeiro">
+            <option value="Rio Grande do Norte">
+            <option value="Rio Grande do Sul">
+            <option value="Rondônia">
+            <option value="Roraima">
+            <option value="Santa Catarina">
+            <option value="São Paulo">
+            <option value="Sergipe">
+            <option value="Tocantins">
+            <option value="Exterior">
+          </datalist>
+
+
+        </fieldset>
+        <fieldset>
+          <legend>Contato</legend>
+          <input placeholder="Número Telefone" type="tel" name="telephone" id="telephone">
+          <input placeholder="Número WhatsApp" type="tel" name="wpp" id="wpp">
+          <input placeholder="Endereço de E-mail" type="email" name="email" id="email">
+
+        </fieldset>
+      </fieldset>
+      <fieldset>
+        <legend>Necessidades Especiais</legend>
+        <input type="checkbox" name="defAuditiva" id="defAuditiva">
+        <label for="defAuditiva">Deficiência Auditiva</label>
+        <input type="checkbox" name="defMotora" id="defMotora">
+        <label for="defMotora">Deficiência Motora</label>
+        <input type="checkbox" name="defVisual" id="defVisual">
+        <label for="defVisual">Deficiência Visual</label>
+        <input type="checkbox" name="cerebralParal" id="cerebralParal">
+        <label for="cerebralParal">Paralísia Cerebral</label>
+        <input type="checkbox" name="aspergers" id="aspergers">
+        <label for="aspergers">Perturbação do Espectro Autista</label>
+        <input type="checkbox" name="psicologico" id="psicologico">
+        <label for="psicologico">Perturbação de Foro Psicológico </label>
+        <input type="checkbox" name="deficitApre" id="deficitApre">
+        <label for="deficitApre">Distúrbio Déficit de Aprendizado </label>
+        <input type="checkbox" name="highSkills" id="highSkills">
+        <label for="highSkills">Altas Habilidades </label>
+
+
+      </fieldset>
+    </form>
+  </div>
+
+</body>
+
+</html>
