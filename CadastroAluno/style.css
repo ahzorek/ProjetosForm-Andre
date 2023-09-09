@@ -49,7 +49,7 @@ h1{
 .institucional, .filler {
   position: sticky;
   top: 4rem;  
-  height: calc(100svh - 8rem);
+  height: calc(100vh - 8rem);
   border-top: 2px solid var(--accent);
   border-bottom: 2px solid var(--accent);  
 }
@@ -63,7 +63,8 @@ h1{
 
 .img {
   align-self: center;
-  max-width: 3fr;
+  width: 3fr;
+  max-width: 30vw;
 }
 
 img {
