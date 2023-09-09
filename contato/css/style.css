@@ -63,6 +63,20 @@ textarea {
   font-family: sans-serif;
 }
 
+input:required {
+  background-image: radial-gradient(rgb(35, 130, 55), rgb(35, 130, 55) 5%, transparent 10%);  
+  background-position-x: -10px;
+  background-position-y: center;
+  background-size: 3.5em;
+  background-repeat: no-repeat;
+  padding-left: 1.5rem;
+  
+}
+
+input:required:invalid {
+  background-image: radial-gradient(rgb(175, 60, 60), rgb(175, 60, 60) 5%, transparent 10%);  
+}
+
 button {
   padding: 10px 20px;
   border: none;

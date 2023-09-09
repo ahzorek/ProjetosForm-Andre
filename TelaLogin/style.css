@@ -169,10 +169,10 @@ label {
   border-bottom: solid 1px rgb(255 255 255 / .50);
 }
 
-.login-input::placeholder {
+/* .login-input::placeholder {
   font-weight: 400;
   color: rgb(255 255 255 / .50);
-}
+} */
 
 input[type=text], input[type=password] {
   background-repeat: no-repeat;
@@ -193,6 +193,7 @@ input[type=password] {
 
 input[type=checkbox]{
   accent-color: rgb(255 255 255);
+  margin-right: .525rem;
 }
 
 .buttons {
