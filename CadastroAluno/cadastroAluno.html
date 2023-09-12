@@ -24,12 +24,12 @@
     <form action="POST" class="cadastro-aluno">
       <fieldset id="informacoesAluno">
         <legend>Informações Aluno</legend>
-        <input type="text" name="firstName" id="firstName" placeholder="Nome" required>
-        <input type="text" name="lastName" id="lastName" placeholder="Sobrenome" required>
-        <input type="date" name="dateOfBirth" id="dateOfBirth" placeholder="Data de nascimento" min="2000-01-01"
-          max="2017-12-31" required>
-        <input type="number" inputmode="numeric" name="classAttending" id="classAttending" placeholder="Série" min="1"
-          max="9" step="1" required>
+        <input title="Primeiro nome" type="text" name="firstName" id="firstName" placeholder="Nome" required>
+        <input title="Sobrenome" type="text" name="lastName" id="lastName" placeholder="Sobrenome" required>
+        <input title="Data de nascimento" type="date" name="dateOfBirth" id="dateOfBirth"
+          placeholder="Data de nascimento" min="2000-01-01" max="2017-12-31" required>
+        <input title="Série a frequentar (1 a 9)" type="number" inputmode="numeric" name="classAttending"
+          id="classAttending" placeholder="Série" min="1" max="9" step="1" required>
         <fieldset>
           <legend>Gênero</legend>
           <ul>
@@ -51,19 +51,22 @@
 
       <fieldset id="informacoesPais">
         <legend>Informações dos Pais</legend>
-        <input type="text" name="mothersName" id="mothersName" placeholder="Nome da mãe">
-        <input type="text" name="fathersName" id="fathersName" placeholder="Nome do pai">
+        <input type="text" name="mothersName" id="mothersName" placeholder="Nome da mãe (opcional)">
+        <input type="text" name="fathersName" id="fathersName" placeholder="Nome do pai (opcional)">
       </fieldset>
 
       <fieldset id="informacoesContato">
         <legend>Informações de Contato</legend>
-        <input placeholder="Endereço" type="text" name="address" id="address" autocomplete="street-address" required>
+        <input title="Rua, número, bairro" placeholder="Endereço" type="text" name="address" id="address"
+          autocomplete="street-address" required>
         <!-- <input placeholder="Número" type="text" name="addressNumber" id="addressNumber"> -->
-        <input placeholder="Complemento" type="text" name="address2" id="address2" autocomplete="address-line-2">
-        <input placeholder="CEP" type="text" inputmode="numeric" name="postalCode" id="postalCode"
+        <input title="Quadra, bloco, prédio, número apartamento" placeholder="Complemento (opcional)" type="text"
+          name="address2" id="address2" autocomplete="address-line-2">
+        <input title="Código postal" placeholder="CEP" type="text" inputmode="numeric" name="postalCode" id="postalCode"
           autocomplete="postal-code" required>
-        <input placeholder="Cidade" type="text" name="city" id="city" required>
-        <input placeholder="Estado" class="datalist" list="estados" id="stateRegion" name="stateRegion" required>
+        <input title="Cidade" placeholder="Cidade" type="text" name="city" id="city" required>
+        <input title="Estado" placeholder="Estado" class="datalist" list="estados" id="stateRegion" name="stateRegion"
+          required>
         <datalist id="estados">
           <option value="Acre">
           <option value="Alagoas">
@@ -96,7 +99,7 @@
         </datalist>
 
         <input placeholder="Número Telefone" type="tel" inputmode="numeric" name="telephone" id="telephone" required>
-        <input placeholder="Número WhatsApp" type="tel" inputmode="numeric" name="wpp" id="wpp">
+        <input placeholder="Número WhatsApp (opcional)" type="tel" inputmode="numeric" name="wpp" id="wpp">
         <input type="email" placeholder="E-mail" name="email" id="email" title="Deve ser um email válido" required>
       </fieldset>
 
@@ -129,7 +132,7 @@
           </li>
           <li>
             <input type="checkbox" name="deficit_apre" id="deficit_apre">
-            <label for="deficit_apre">Distúrbio Déficit de Aprendizado</label>
+            <label for="deficit_apre">Distúrbios de Aprendizagem</label>
           </li>
           <li>
             <input type="checkbox" name="high_skills" id="high_skills">
